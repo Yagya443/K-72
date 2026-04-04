@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+body {
+    background-color: #ffffff;
+}
+
+:root {
+    --bg1: #ffcc00;
+
+    --textcolor: #ffffffcd;
+    --primaryfont: "Science Gothic", sans-serif;
+    --secondaryfont: "Raleway", sans-serif;
+}
+
+.title {
+    font-family: var(--primaryfont);
+}
+.para {
+    font-family: var(--secondaryfont);
+}
+
+*::selection {
+    background: var(--bg1);
+    color: black;
+}
+
+.agency {
+    color: #111;
+}
+
+.navBaritem {
+    position: relative;
+    overflow: hidden;
+    background: black;
+    color: white;
+    font-family: var(--primaryfont);
+}
+
+.navBaritem::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #facc15;
+    transform: translateY(-100%);
+    z-index: 0;
+}
+
+.navBaritem:hover::before {
+    animation: slideDown 0.45s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+
+.navBaritem::before {
+    animation: slideUpReset 0.45s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+
+.navBaritem .itemtext {
+    position: relative;
+    z-index: 1;
+}
+
+.navBaritem:hover .itemtext {
+    color: #000;
+}
+
+.main-font {
+    font-family: "Orbitron", sans-serif;
+    font-weight: 800;
+}
+
+.text-main {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-hover {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    background: #facc15;
+    z-index: 2;
+}
+
+.group:hover .text-hover {
+    animation: slideDown 0.45s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+
+.group:not(:hover) .text-hover {
+    animation: slideUpReset 0.45s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+
+.marquee-track {
+    animation: marqueeMove 8s linear infinite;
+}
+
+.menu-wrapper {
+    font-family: var(--primaryfont);
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes slideUpReset {
+    from {
+        transform: translateY(0%);
+    }
+    to {
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes marqueeMove {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.project-wrapper,
+.contact-wrapper {
+    font-family: var(--primaryfont);
+}
+
+.contact-wrapper {
+    color: #ffffff;
+}
+
+.agency {
+    transition: background-color 0.3s ease-out;
+}
+
+
