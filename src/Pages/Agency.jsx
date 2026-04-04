@@ -118,42 +118,42 @@ const Agency = () => {
         });
         gsap.to(".hoverImg", {
             scrollTrigger: {
-                markers: true,
+                // markers: true,
                 scrub: 1,
-                // trigger: ".hoverImg",
+                trigger: ".hoverImg",
                 start: "center center",
                 end: "center+=200 center",
                 pin: true,
             },
         });
 
-        // gsap.to(".projectImgContainer", {
-        //     scrollTrigger: {
-        //         trigger: ".projectImgContainer",
-        //         start: "top top",
-        //         end: "bottom bottom",
-        //         scrub: 1,
-        //         pin: true,
-        //         markers: true,
-        //     },
-        // });
+        gsap.to(".projectImgContainer", {
+            scrollTrigger: {
+                trigger: ".projectImgContainer",
+                markers: true,
+                start: "center+=300 center",
+                end: `+=${images.length * 100}%`,
+                pin: true,
+            },
+        });
 
-        const projects = document.querySelectorAll(".projectImg1");
-        projects.forEach((project, i) => {
-            if (i === 0) return;
+        document.querySelectorAll(".projectImg").forEach((card, idx) => {
+            if (idx === 0) return;
 
-            gsap.to(project, {
-                y: "-70vh",
+            gsap.to(card, {
+                y: `-${(idx * 75)}vh`,
+                ease:"none",
                 scrollTrigger: {
-                    trigger: project,
-                    markers:true,
-                    start: "top+=50 center",
+                    trigger: card,
+                    // markers: true,
+                    start: "top-=250 center",
                     end: "center+=200 center",
-                    scrub: 1,
+                    scrub: 2,
                 },
             });
         });
     });
+
     return (
         <div
             className={`agency min-h-screen w-full ${heightBG ? "bg-gray-800" : "bg-amber-50"}`}
@@ -234,18 +234,22 @@ const Agency = () => {
                 </div>
             </div>
 
-            <div className="min-h-[200vh] w-full relative mt-24">
-                <p className="w-full flex justify-center sticky top-12 text-5xl text-amber-50 z-10">
+            <div className="min-h-[600vh] w-full relative mt-72">
+                <p className="w-full flex justify-center sticky top-8  text-5xl text-amber-50 z-10">
                     View All Projects
                 </p>
 
-                <div className="projectImgContainer relative w-full">
+                <div className="projectImgContainer mt-2 relative w-full">
                     {images.map((img, idx) => (
                         <img
                             key={idx}
                             src={img}
-                            className={`projectImg1 w-full h-[90vh] rounded-4xl object-cover absolute`}
-                            style={{ top: `${idx * 80 - 10}vh` }}
+                            className={`projectImg w-full h-[90vh] rounded-4xl object-cover absolute`}
+                            style={{
+                                // top: `${(idx * 75) - (10)}vh`,
+                                top: `${(idx * 80)}vh`,
+                                zIndex: idx,
+                            }}
                         />
                     ))}
                 </div>
