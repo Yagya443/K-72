@@ -2,6 +2,13 @@
 
 body {
     background-color: #ffffff;
+
+}
+
+html {
+  /* scrollbar-color: [thumb-color] [track-color] */
+  scrollbar-color: #555555 transparent; 
+  scrollbar-width: thin; /* Optional: makes the scrollbar thinner */
 }
 
 :root {
@@ -111,6 +118,16 @@ body {
         transform: translateY(0%);
     }
 }
+/* 
+.firstName-wrapper{
+    animation: marqueeMove 8s linear infinite;
+}
+
+.lastName-wrapper{
+    animation: reverseMarqueeMove 12s linear infinite;
+} */
+
+
 
 @keyframes slideUpReset {
     from {
@@ -129,11 +146,20 @@ body {
         transform: translateX(-50%);
     }
 }
+@keyframes reverseMarqueeMove {
+    from {
+        transform: translateX(-50%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
 
 .project-wrapper,
-.contact-wrapper {
+.contact-wrapper,.agency {
     font-family: var(--primaryfont);
 }
+
 
 .contact-wrapper {
     color: #ffffff;

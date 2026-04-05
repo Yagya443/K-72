@@ -2,6 +2,7 @@ import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
 import gsap from "gsap";
+import { Timeline } from "gsap/gsap-core.js";
 
 const Agency = () => {
     const imgDiv = useRef(null);
@@ -29,56 +30,78 @@ const Agency = () => {
 
     const teamData = [
         {
-            name: "Aarav Sharma",
+            firstName: "Aarav",
+            lastName: "Sharma",
             position: "CEO",
             img: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=687&auto=format&fit=crop",
         },
         {
-            name: "Priya Mehta",
+            firstName: "Priya",
+            lastName: "Mehta",
             position: "CTO",
             img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=687&auto=format&fit=crop",
         },
         {
-            name: "Rohan Verma",
+            firstName: "Rohan",
+            lastName: "Verma",
             position: "CFO",
             img: "https://images.unsplash.com/photo-1584794263691-2dd2f668cfee?q=80&w=687&auto=format&fit=crop",
         },
         {
-            name: "Sneha Iyer",
+            firstName: "Sneha",
+            lastName: "Iyer",
             position: "HR Manager",
             img: "https://images.unsplash.com/photo-1522556189639-b150ed9c4330?q=80&w=1974&auto=format&fit=crop",
         },
         {
-            name: "Karan Patel",
+            firstName: "Karan",
+            lastName: "Patel",
             position: "Dev Manager",
             img: "https://images.unsplash.com/photo-1712546852186-4e180297529e?q=80&w=687&auto=format&fit=crop",
         },
         {
-            name: "Neha Gupta",
+            firstName: "Neha",
+            lastName: "Gupta",
             position: "Marketing Manager",
             img: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=687&auto=format&fit=crop",
         },
         {
-            name: "Aditya Singh",
+            firstName: "Aditya",
+            lastName: "Singh",
             position: "Product Manager",
             img: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?q=80&w=687&auto=format&fit=crop",
         },
         {
-            name: "Kavya Nair",
+            firstName: "Kavya",
+            lastName: "Nair",
+
             position: "UI/UX Designer",
             img: "https://plus.unsplash.com/premium_photo-1671656349322-41de944d259b?q=80&w=687&auto=format&fit=crop",
         },
         {
-            name: "Ananya Kapoor",
+            firstName: "Ananya",
+            lastName: "Kapoor",
             position: "Data Analyst",
             img: "https://images.unsplash.com/photo-1677005142678-d141a1eabbe9?w=600&auto=format&fit=crop&q=60",
         },
     ];
 
     const images = [
-        "https://images.unsplash.com/photo-1723854222924-c70ae9efa8ca?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "https://images.unsplash.com/photo-1761839258289-72f12b0de058?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "https://images.unsplash.com/photo-1731093133109-78ea287c8b30?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDV8fHxlbnwwfHx8fHw%3D",
+        {
+            image: "https://images.unsplash.com/photo-1723854222924-c70ae9efa8ca?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            para: "opto-réseau",
+            title: "We See You Like No Other",
+        },
+        {
+            image: "https://images.unsplash.com/photo-1761839258289-72f12b0de058?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            para: "Lamajeure",
+            title: "Lamajeure",
+        },
+        {
+            image: "https://images.unsplash.com/photo-1731093133109-78ea287c8b30?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDV8fHxlbnwwfHx8fHw%3D",
+            para: "Lassonde",
+            title: "Fruité",
+        },
     ];
 
     useGSAP(() => {
@@ -104,15 +127,15 @@ const Agency = () => {
     });
 
     useGSAP(() => {
-        gsap.to(".photoDiv2", {
-            y: -720,
+        gsap.to(".card2 ", {
+            y: "-97vh",
             scrollTrigger: {
                 // markers: true,
                 pin: true,
                 pinSpacing: false,
                 scrub: 1,
                 trigger: ".box-wrapper",
-                start: "center-=400 center",
+                start: "center-=375 center",
                 end: "center+=200 center",
             },
         });
@@ -130,7 +153,7 @@ const Agency = () => {
         gsap.to(".projectImgContainer", {
             scrollTrigger: {
                 trigger: ".projectImgContainer",
-                markers: true,
+                // markers: true,
                 start: "center+=300 center",
                 end: `+=${images.length * 100}%`,
                 pin: true,
@@ -141,16 +164,83 @@ const Agency = () => {
             if (idx === 0) return;
 
             gsap.to(card, {
-                y: `-${(idx * 75)}vh`,
-                ease:"none",
+                y: `-${idx * 75}vh`,
+                ease: "power2.out",
                 scrollTrigger: {
                     trigger: card,
-                    // markers: true,
                     start: "top-=250 center",
                     end: "center+=200 center",
                     scrub: 2,
                 },
             });
+
+            gsap.to(card.querySelector("img"), {
+                scale: 1.1,
+                ease: "power4.in",
+                scrollTrigger: {
+                    trigger: card,
+                    // markers:true,
+                    start: "top-=250 center",
+                    end: "center+=200 center",
+                    scrub: 2,
+                },
+            });
+        });
+
+        gsap.to(".firstName-wrapper,.firstName-wrapper2", {
+            xPercent: -50,
+            duration: 8,
+            ease: "none",
+            repeat: -1,
+        });
+
+        gsap.fromTo(
+            ".lastName-wrapper, .lastName-wrapper2",
+            { xPercent: -50 },
+            {
+                xPercent: 0,
+                duration: 8,
+                ease: "none",
+                repeat: -1,
+            },
+        );
+
+        ScrollTrigger.create({
+            trigger: ".photoDiv1",
+            // markers: true,
+            start: "top center+=50",
+            end: "center center",
+            onEnter: () => {
+                gsap.to(".lastName-wrapper, .firstName-wrapper", { opacity: 1 });
+            },
+            onLeave: () => {
+                gsap.to(".lastName-wrapper, .firstName-wrapper", { opacity: 0 });
+            },
+            onEnterBack: () => {
+                gsap.to(".lastName-wrapper, .firstName-wrapper", { opacity: 1 });
+            },
+            onLeaveBack: () => {
+                gsap.to(".lastName-wrapper, .firstName-wrapper", { opacity: 0 });
+            },
+        });
+
+        ScrollTrigger.create({
+            trigger: ".photoDiv1",
+            start: "center+=100 center",
+            end: "bottom+=500 center",
+            markers: true,
+            onEnter: () => {
+                gsap.to(".lastName-wrapper2, .firstName-wrapper2", { opacity: 1 });
+            },
+            onLeave: () => {
+                gsap.to(".lastName-wrapper2, .firstName-wrapper2", { opacity: 0 });
+            },
+            onEnterBack: () => {
+                gsap.to(".lastName-wrapper2, .firstName-wrapper2", { opacity: 1 });
+            },
+            onLeaveBack: () => {
+                gsap.to(".lastName-wrapper2, .firstName-wrapper2", { opacity: 0 });
+            },
         });
     });
 
@@ -192,21 +282,83 @@ const Agency = () => {
                 </div>
             </div>
             {/* teamInfo */}
-            <div className={`section2 mt-32 min-h-screen w-full relative`}>
+            <div
+                className={`section2 mt-32 min-h-screen w-full relative overflow-hidden`}
+            >
                 <div className="box-wrapper h-auto rounded-2xl flex w-full items-center flex-col">
-                    <div className="photoDiv1  w-120 rounded-2xl  ">
+                    {/* First Images */}
+                    <div className="card1 relative w-125 rounded-2xl">
+                        <div className="absolute left-0 top-[30vh]">
+                            <div className="firstName-wrapper flex w-[200vw] z-0">
+                                <h1 className="text-9xl text-[#ffcc00] w-[100vw]">
+                                    {teamData[2].firstName}
+                                </h1>
+                                <h1 className="text-9xl text-[#ffcc00] w-[100vw]">
+                                    {teamData[2].firstName}
+                                </h1>
+                            </div>
+                            <div className="lastName-wrapper flex w-[200vw] relative z-20">
+                                <div className="flex items-end gap-4 justify-end w-[100vw]">
+                                    <h1 className="text-9xl text-[#ffcc00]">
+                                        {teamData[2].lastName}
+                                    </h1>
+                                    <h4 className="text-4xl text-amber-50 pb-3">
+                                        {teamData[2].position}
+                                    </h4>
+                                </div>
+                                <div className="flex items-end justify-end gap-4 w-[100vw]">
+                                    <h1 className="text-9xl text-[#ffcc00]">
+                                        {teamData[2].lastName}
+                                    </h1>
+                                    <h4 className="text-4xl text-amber-50 pb-3">
+                                        {teamData[2].position}
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
                         <img
+                            className="photoDiv1 h-full w-full object-cover relative z-10"
                             src={teamData[2].img}
-                            className="h-full w-full rounded-2xl object-cover"
                         />
                     </div>
-                    <div className="photoDiv2 h-180 w-120 rounded-2xl ">
+
+                    {/* Second Images */}
+                    <div className="card2 relative z-20 w-125 rounded-2xl">
+                        <div className="absolute left-0 top-[30vh] w-full z-50">
+                            <div className="firstName-wrapper2 flex w-[200vw] z-30">
+                                <h1 className="text-9xl text-[#ffcc00] w-[100vw]">
+                                    {teamData[3].firstName}
+                                </h1>
+                                <h1 className="text-9xl text-[#ffcc00] w-[100vw]">
+                                    {teamData[3].firstName}
+                                </h1>
+                            </div>
+                            <div className="lastName-wrapper2 flex w-[200vw] relative z-50">
+                                <div className="flex items-end gap-4 justify-end w-[100vw]">
+                                    <h1 className="text-9xl text-[#ffcc00]">
+                                        {teamData[3].lastName}
+                                    </h1>
+                                    <h4 className="text-4xl text-amber-50 pb-3">
+                                        {teamData[3].position}
+                                    </h4>
+                                </div>
+                                <div className="flex items-end justify-end gap-4 w-[100vw]">
+                                    <h1 className="text-9xl text-[#ffcc00]">
+                                        {teamData[3].lastName}
+                                    </h1>
+                                    <h4 className="text-4xl text-amber-50 pb-3">
+                                        {teamData[3].position}
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
                         <img
+                            className="photoDiv2 h-full w-full object-cover relative z-40"
                             src={teamData[3].img}
-                            className="h-full w-full object-cover rounded-2xl"
                         />
                     </div>
                 </div>
+
                 <div className="w-full border-amber-50 border-t-2 relative">
                     {teamData.map((team, idx) => (
                         <div
@@ -216,7 +368,7 @@ const Agency = () => {
                             onMouseLeave={() => setImgDisplay(-1)}
                         >
                             <h3 className="text-xl">{team.position}</h3>
-                            <h1 className="text-5xl">{team.name}</h1>
+                            <h1 className="text-5xl">{team.firstName} {team.lastName}</h1>
                         </div>
                     ))}
                     <div
@@ -234,23 +386,34 @@ const Agency = () => {
                 </div>
             </div>
 
-            <div className="min-h-[600vh] w-full relative mt-72">
+            <div className="min-h-[100vh] w-full relative mt-72">
                 <p className="w-full flex justify-center sticky top-8  text-5xl text-amber-50 z-10">
                     View All Projects
                 </p>
 
                 <div className="projectImgContainer mt-2 relative w-full">
                     {images.map((img, idx) => (
-                        <img
+                        <div
                             key={idx}
-                            src={img}
-                            className={`projectImg w-full h-[90vh] rounded-4xl object-cover absolute`}
+                            className="projectImg absolute w-full rounded-4xl h-[90vh] overflow-hidden"
                             style={{
-                                // top: `${(idx * 75) - (10)}vh`,
-                                top: `${(idx * 80)}vh`,
+                                top: `${idx * 80}vh`,
                                 zIndex: idx,
                             }}
-                        />
+                        >
+                            <img
+                                src={img.image}
+                                className={`w-full h-full rounded-4xl object-cover absolute`}
+                            />
+                            <div className="absolute left-1/2 top-1/2 -translate-1/2 text-center text-amber-50 text-nowrap">
+                                <div className="text-4xl font-semibold">
+                                    {img.para}
+                                </div>
+                                <div className="text-8xl font-bold">
+                                    {img.title}
+                                </div>
+                            </div>
+                        </div>
                     ))}
                 </div>
             </div>
