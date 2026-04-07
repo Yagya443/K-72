@@ -40,15 +40,15 @@ const Menu = () => {
                                         SEE EVERYTHING
                                     </div>
                                     <img
-                                        className="h-[100px]"
-                                        src="./src/Media/gta-v-style-art_938060-121.webp"
+                                        className="h-[100px] w-[225px] rounded-full"
+                                        src="https://k72.ca/images/caseStudies/PJC/Thumbnails/PJC_SiteK72_Thumbnail_1280x960.jpg?w=1280&h=960&s=b5151821a8c0d9603263d7ec827bee9b"
                                     />
                                     <div className="text-nowrap">
                                         SEE EVERYTHING
                                     </div>
                                     <img
-                                        className="h-[100px]"
-                                        src="./src/Media/gta-v-style-art_938060-121.webp"
+                                        className="h-[100px] w-[225px] rounded-full"
+                                        src="https://k72.ca/images/caseStudies/iA_BRAND/Thumbnail.png?w=1280&h=960&s=008dc81d7a1c8fa45e299f6d2dbafc93"
                                     />
                                     <div className="text-nowrap">
                                         SEE EVERYTHING

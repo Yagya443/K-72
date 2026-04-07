@@ -88,17 +88,17 @@ const Agency = () => {
 
     const images = [
         {
-            image: "https://images.unsplash.com/photo-1723854222924-c70ae9efa8ca?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            image: "https://k72.ca/images/caseStudies/Opto/thumbnailimage_opto.jpg?w=1280&h=960&s=938f0bfb3de1ff2a2846b884eec2d757",
             para: "opto-réseau",
             title: "We See You Like No Other",
         },
         {
-            image: "https://images.unsplash.com/photo-1761839258289-72f12b0de058?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            image: "https://k72.ca/images/caseStudies/PME-MTL/PME-MTL_Thumbnail.jpg?w=1280&h=960&s=49e3b251d0a28f1f8d40fd59517fc000",
             para: "Lamajeure",
             title: "Lamajeure",
         },
         {
-            image: "https://images.unsplash.com/photo-1731093133109-78ea287c8b30?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDV8fHxlbnwwfHx8fHw%3D",
+            image: "https://k72.ca/images/caseStudies/FRUITE/Fruite_thumbnail_bbq.jpg?w=1280&h=960&s=953c1f702bec28d66d07e95bc1261821",
             para: "Lassonde",
             title: "Fruité",
         },
@@ -161,7 +161,20 @@ const Agency = () => {
         });
 
         document.querySelectorAll(".projectImg").forEach((card, idx) => {
-            if (idx === 0) return;
+            if (idx === 0) {
+                gsap.to(card.querySelector("img"), {
+                    scale: 1.1,
+                    ease: "power2.in",
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top center",
+                        end: "center+=200 center",
+                        markers: true,
+                        scrub: 2,
+                    },
+                });
+                return;
+            }
 
             gsap.to(card, {
                 y: `-${idx * 75}vh`,
@@ -176,7 +189,7 @@ const Agency = () => {
 
             gsap.to(card.querySelector("img"), {
                 scale: 1.1,
-                ease: "power4.in",
+                ease: "power2.in",
                 scrollTrigger: {
                     trigger: card,
                     // markers:true,
@@ -196,10 +209,10 @@ const Agency = () => {
 
         gsap.fromTo(
             ".lastName-wrapper, .lastName-wrapper2",
-            { xPercent: -50 },
+            { xPercent: -100 },
             {
                 xPercent: 0,
-                duration: 8,
+                duration: 12,
                 ease: "none",
                 repeat: -1,
             },
@@ -211,16 +224,24 @@ const Agency = () => {
             start: "top center+=50",
             end: "center center",
             onEnter: () => {
-                gsap.to(".lastName-wrapper, .firstName-wrapper", { opacity: 1 });
+                gsap.to(".lastName-wrapper, .firstName-wrapper", {
+                    opacity: 1,
+                });
             },
             onLeave: () => {
-                gsap.to(".lastName-wrapper, .firstName-wrapper", { opacity: 0 });
+                gsap.to(".lastName-wrapper, .firstName-wrapper", {
+                    opacity: 0,
+                });
             },
             onEnterBack: () => {
-                gsap.to(".lastName-wrapper, .firstName-wrapper", { opacity: 1 });
+                gsap.to(".lastName-wrapper, .firstName-wrapper", {
+                    opacity: 1,
+                });
             },
             onLeaveBack: () => {
-                gsap.to(".lastName-wrapper, .firstName-wrapper", { opacity: 0 });
+                gsap.to(".lastName-wrapper, .firstName-wrapper", {
+                    opacity: 0,
+                });
             },
         });
 
@@ -230,16 +251,24 @@ const Agency = () => {
             end: "bottom+=500 center",
             markers: true,
             onEnter: () => {
-                gsap.to(".lastName-wrapper2, .firstName-wrapper2", { opacity: 1 });
+                gsap.to(".lastName-wrapper2, .firstName-wrapper2", {
+                    opacity: 1,
+                });
             },
             onLeave: () => {
-                gsap.to(".lastName-wrapper2, .firstName-wrapper2", { opacity: 0 });
+                gsap.to(".lastName-wrapper2, .firstName-wrapper2", {
+                    opacity: 0,
+                });
             },
             onEnterBack: () => {
-                gsap.to(".lastName-wrapper2, .firstName-wrapper2", { opacity: 1 });
+                gsap.to(".lastName-wrapper2, .firstName-wrapper2", {
+                    opacity: 1,
+                });
             },
             onLeaveBack: () => {
-                gsap.to(".lastName-wrapper2, .firstName-wrapper2", { opacity: 0 });
+                gsap.to(".lastName-wrapper2, .firstName-wrapper2", {
+                    opacity: 0,
+                });
             },
         });
     });
@@ -288,29 +317,29 @@ const Agency = () => {
                 <div className="box-wrapper h-auto rounded-2xl flex w-full items-center flex-col">
                     {/* First Images */}
                     <div className="card1 relative w-125 rounded-2xl">
-                        <div className="absolute left-0 top-[30vh]">
+                        <div className="absolute left-0 top-[20vh]">
                             <div className="firstName-wrapper flex w-[200vw] z-0">
-                                <h1 className="text-9xl text-[#ffcc00] w-[100vw]">
+                                <h1 className="text-[12rem] text-[#ffcc00] w-[100vw]">
                                     {teamData[2].firstName}
                                 </h1>
-                                <h1 className="text-9xl text-[#ffcc00] w-[100vw]">
+                                <h1 className="text-[12rem] text-[#ffcc00] w-[100vw]">
                                     {teamData[2].firstName}
                                 </h1>
                             </div>
                             <div className="lastName-wrapper flex w-[200vw] relative z-20">
                                 <div className="flex items-end gap-4 justify-end w-[100vw]">
-                                    <h1 className="text-9xl text-[#ffcc00]">
+                                    <h1 className="text-[8rem] text-[#ffcc00]">
                                         {teamData[2].lastName}
                                     </h1>
-                                    <h4 className="text-4xl text-amber-50 pb-3">
+                                    <h4 className="text-4xl text-amber-50 pb-10">
                                         {teamData[2].position}
                                     </h4>
                                 </div>
                                 <div className="flex items-end justify-end gap-4 w-[100vw]">
-                                    <h1 className="text-9xl text-[#ffcc00]">
+                                    <h1 className="text-[8rem] text-[#ffcc00]">
                                         {teamData[2].lastName}
                                     </h1>
-                                    <h4 className="text-4xl text-amber-50 pb-3">
+                                    <h4 className="text-4xl text-amber-50 pb-10">
                                         {teamData[2].position}
                                     </h4>
                                 </div>
@@ -324,29 +353,29 @@ const Agency = () => {
 
                     {/* Second Images */}
                     <div className="card2 relative z-20 w-125 rounded-2xl">
-                        <div className="absolute left-0 top-[30vh] w-full z-50">
+                        <div className="absolute left-0 top-[20vh] w-full ">
                             <div className="firstName-wrapper2 flex w-[200vw] z-30">
-                                <h1 className="text-9xl text-[#ffcc00] w-[100vw]">
+                                <h1 className="text-[12rem] text-[#ffcc00] w-[100vw]">
                                     {teamData[3].firstName}
                                 </h1>
-                                <h1 className="text-9xl text-[#ffcc00] w-[100vw]">
+                                <h1 className="text-[12rem] text-[#ffcc00] w-[100vw]">
                                     {teamData[3].firstName}
                                 </h1>
                             </div>
                             <div className="lastName-wrapper2 flex w-[200vw] relative z-50">
-                                <div className="flex items-end gap-4 justify-end w-[100vw]">
-                                    <h1 className="text-9xl text-[#ffcc00]">
+                                <div className="flex items-end justify-end gap-4 w-[100vw]">
+                                    <h1 className="text-[8rem] text-[#ffcc00]">
                                         {teamData[3].lastName}
                                     </h1>
-                                    <h4 className="text-4xl text-amber-50 pb-3">
+                                    <h4 className="text-4xl text-amber-50 pb-10">
                                         {teamData[3].position}
                                     </h4>
                                 </div>
                                 <div className="flex items-end justify-end gap-4 w-[100vw]">
-                                    <h1 className="text-9xl text-[#ffcc00]">
+                                    <h1 className="text-[8rem] text-[#ffcc00]">
                                         {teamData[3].lastName}
                                     </h1>
-                                    <h4 className="text-4xl text-amber-50 pb-3">
+                                    <h4 className="text-4xl text-amber-50 pb-10">
                                         {teamData[3].position}
                                     </h4>
                                 </div>
@@ -368,7 +397,9 @@ const Agency = () => {
                             onMouseLeave={() => setImgDisplay(-1)}
                         >
                             <h3 className="text-xl">{team.position}</h3>
-                            <h1 className="text-5xl">{team.firstName} {team.lastName}</h1>
+                            <h1 className="text-5xl">
+                                {team.firstName} {team.lastName}
+                            </h1>
                         </div>
                     ))}
                     <div
@@ -376,7 +407,7 @@ const Agency = () => {
                     >
                         {imgDisplay !== -1 && (
                             <img
-                                className={`w-full h-full object-cover rounded-3xl transition-transform duration-500 ease-out
+                                className={`w-full h-full object-cover rounded-3xl z-30 transition-transform duration-500 ease-out
       ${imgDisplay !== -1 ? "translate-x-0" : "-translate-x-full"}
     `}
                                 src={teamData[imgDisplay].img}
@@ -405,7 +436,7 @@ const Agency = () => {
                                 src={img.image}
                                 className={`w-full h-full rounded-4xl object-cover absolute`}
                             />
-                            <div className="absolute left-1/2 top-1/2 -translate-1/2 text-center text-amber-50 text-nowrap">
+                            <div className="absolute left-1/2 top-1/2 -translate-1/2 text-center text-amber-50 text-nowrap ">
                                 <div className="text-4xl font-semibold">
                                     {img.para}
                                 </div>

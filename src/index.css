@@ -6,9 +6,9 @@ body {
 }
 
 html {
-  /* scrollbar-color: [thumb-color] [track-color] */
-  scrollbar-color: #555555 transparent; 
-  scrollbar-width: thin; /* Optional: makes the scrollbar thinner */
+  scrollbar-color: #1e2939 ; 
+  scrollbar-color: #ffcc00 #1e2939;
+  scrollbar-width:thin; 
 }
 
 :root {
