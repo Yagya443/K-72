@@ -36,8 +36,8 @@ const Projects = () => {
 
     useGSAP(() => {
         gsap.from(".individualBox", {
-            height: '60px',
-            stagger:0.9,
+            height: '50px',
+            stagger:0.8,
             transformOrigin: "top",
             ease:'none',
             scrollTrigger: {

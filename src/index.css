@@ -6,10 +6,9 @@ body {
 }
 
 html {
-  scrollbar-color: #1e2939 ; 
-  scrollbar-color: #ffcc00 #1e2939;
+  scrollbar-color: #ffcc0000 #1e2939;
   scrollbar-width:thin; 
-}
+}   
 
 :root {
     --bg1: #ffcc00;
@@ -118,15 +117,10 @@ html {
         transform: translateY(0%);
     }
 }
-/* 
-.firstName-wrapper{
-    animation: marqueeMove 8s linear infinite;
-}
 
-.lastName-wrapper{
-    animation: reverseMarqueeMove 12s linear infinite;
+/* .contact-manquee{
+    animation: marqueeMove2 3s linear infinite;
 } */
-
 
 
 @keyframes slideUpReset {
@@ -134,7 +128,7 @@ html {
         transform: translateY(0%);
     }
     to {
-        transform: translateY(-100%);
+        transform: translateY(-150%);
     }
 }
 
@@ -144,6 +138,14 @@ html {
     }
     to {
         transform: translateX(-50%);
+    }
+}
+@keyframes marqueeMove2 {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
     }
 }
 @keyframes reverseMarqueeMove {

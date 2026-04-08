@@ -1,7 +1,9 @@
-import { Link, useNavigate } from "react-router-dom";
+    import { Link, useNavigate } from "react-router-dom";
 import { IoIosClose } from "react-icons/io";
 import { IoMdClose } from "react-icons/io";
 import { IoCloseOutline } from "react-icons/io5";
+import { FaHeart } from "react-icons/fa";
+
 
 const Menu = () => {
     const navigate = useNavigate();
@@ -35,7 +37,7 @@ const Menu = () => {
                         </div>
                         <div className="text-hover absolute text-9xl">
                             <div className="w-screen overflow-hidden">
-                                <div className="marquee-track flex w-[max-content] items-center gap-[3rem]">
+                                <div className="marquee-track flex w-[max-content] items-center ">
                                     <div className="text-nowrap">
                                         SEE EVERYTHING
                                     </div>
@@ -84,31 +86,37 @@ const Menu = () => {
                                     <div className="text-nowrap">
                                         KNOW US MORE
                                     </div>
-                                    <img
+                                    {/* <img
                                         className="h-[100px]"
                                         src="./src/Media/gta-v-style-art_938060-121.webp"
-                                    />
+                                    /> */}
+                                    <FaHeart size={110}/>
+
                                     <div className="text-nowrap">
                                         KNOW US MORE
                                     </div>
-                                    <img
+                                    {/* <img
                                         className="h-[100px]"
                                         src="./src/Media/gta-v-style-art_938060-121.webp"
-                                    />
+                                    /> */}
+                                    <FaHeart size={110}/>
                                     <div className="text-nowrap">
                                         KNOW US MORE
                                     </div>
-                                    <img
+                                    {/* <img
                                         className="h-[100px]"
                                         src="./src/Media/gta-v-style-art_938060-121.webp"
-                                    />
+                                    /> */}
+                                    <FaHeart size={110}/>
                                     <div className="text-nowrap">
                                         KNOW US MORE
                                     </div>
-                                    <img
+                                    {/* <img
                                         className="h-[100px]"
                                         src="./src/Media/gta-v-style-art_938060-121.webp"
-                                    />
+                                    /> */}
+                                    <FaHeart size={110}/>
+
                                 </div>
                             </div>
                         </div>
@@ -129,29 +137,31 @@ const Menu = () => {
                                         SEND US MAIL
                                     </div>
                                     <img
-                                        className="h-[100px]"
-                                        src="./src/Media/gta-v-style-art_938060-121.webp"
+                                        className="h-[100px] w-[225px] rounded-full"
+
+                                        src="https://k72.ca/images/blog/blogImg/K72_article_ChatGPT_blogue.jpg?w=1280&h=960&s=184feac75d6b23e52aff206bff3c3c45"
                                     />
                                     <div className="text-nowrap">
                                         SEND US MAIL
                                     </div>
                                     <img
-                                        className="h-[100px]"
-                                        src="./src/Media/gta-v-style-art_938060-121.webp"
+                                        className="h-[100px] w-[225px] rounded-full"
+                                        src="https://k72.ca/images/blog/blogImg/50ff59cc0550df5b36543807a58db98c52e01a22274a317eafbfa5266941579b.png?w=1280&h=960&s=0710934494c383dae85863a13e713d46"
                                     />
                                     <div className="text-nowrap">
                                         SEND US MAIL
                                     </div>
                                     <img
-                                        className="h-[100px]"
-                                        src="./src/Media/gta-v-style-art_938060-121.webp"
+                                        className="h-[100px] w-[225px] rounded-full"
+
+                                        src="https://k72.ca/images/blog/blogImg/K72_article_ChatGPT_blogue.jpg?w=1280&h=960&s=184feac75d6b23e52aff206bff3c3c45"
                                     />
                                     <div className="text-nowrap">
                                         SEND US MAIL
                                     </div>
                                     <img
-                                        className="h-[100px]"
-                                        src="./src/Media/gta-v-style-art_938060-121.webp"
+                                        className="h-[100px] w-[225px] rounded-full"
+                                        src="https://k72.ca/images/blog/blogImg/50ff59cc0550df5b36543807a58db98c52e01a22274a317eafbfa5266941579b.png?w=1280&h=960&s=0710934494c383dae85863a13e713d46"
                                     />
                                 </div>
                             </div>

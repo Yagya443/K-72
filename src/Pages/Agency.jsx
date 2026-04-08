@@ -201,7 +201,7 @@ const Agency = () => {
         });
 
         gsap.to(".firstName-wrapper,.firstName-wrapper2", {
-            xPercent: -50,
+            x: '-50%',
             duration: 8,
             ease: "none",
             repeat: -1,
@@ -209,9 +209,9 @@ const Agency = () => {
 
         gsap.fromTo(
             ".lastName-wrapper, .lastName-wrapper2",
-            { xPercent: -100 },
+            { x: '-100%' },
             {
-                xPercent: 0,
+                x: 0,
                 duration: 12,
                 ease: "none",
                 repeat: -1,
