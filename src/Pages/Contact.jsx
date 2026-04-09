@@ -71,7 +71,7 @@ const Contact = () => {
 
     return (
         <div
-            className="contact-wrapper w-full bg-gray-800 pt-1 overflow-hidden pb-20"
+            className="contact-wrapper w-full bg-black pt-1 overflow-hidden pb-20"
             ref={arrRef}
         >
             {Array.from({ length: 15 }).map((_, i) => (

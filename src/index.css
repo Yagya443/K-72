@@ -2,13 +2,16 @@
 
 body {
     background-color: #ffffff;
-
 }
 
 html {
-  scrollbar-color: #ffcc0000 #1e2939;
-  scrollbar-width:thin; 
-}   
+    scrollbar-color: #ffcc00 #1e2939;
+    scrollbar-width: thin;
+}
+
+.contact-wrapper {
+    scrollbar-width: none;
+}
 
 :root {
     --bg1: #ffcc00;
@@ -46,7 +49,7 @@ html {
     content: "";
     position: absolute;
     inset: 0;
-    background: #facc15;
+    background: var(--bg1);
     transform: translateY(-100%);
     z-index: 0;
 }
@@ -102,7 +105,7 @@ html {
 }
 
 .marquee-track {
-    animation: marqueeMove 8s linear infinite;
+    animation: marqueeMove 12s linear infinite;
 }
 
 .menu-wrapper {
@@ -122,13 +125,12 @@ html {
     animation: marqueeMove2 3s linear infinite;
 } */
 
-
 @keyframes slideUpReset {
     from {
-        transform: translateY(0%);
+        transform: translateY(100%);
     }
     to {
-        transform: translateY(-150%);
+        transform: translateY(0%);
     }
 }
 
@@ -158,10 +160,10 @@ html {
 }
 
 .project-wrapper,
-.contact-wrapper,.agency {
+.contact-wrapper,
+.agency {
     font-family: var(--primaryfont);
 }
-
 
 .contact-wrapper {
     color: #ffffff;
@@ -171,4 +173,35 @@ html {
     transition: background-color 0.3s ease-out;
 }
 
+.group2:hover .hoverText {
+    display: block;
+    background-color: #facc15;
+}
 
+.group2:hover span {
+    display: none;
+}
+
+/* 
+.group2:nth-child(2):hover .hoverText{
+    animation: slideDown 0.2s ease-in-out;
+    display: block;
+    background-color: #facc15;
+}
+.group2:nth-child(5):hover .hoverText{
+    animation: slideUpReset 0.2s ease-in-out;
+    display: block;
+    background-color: #facc15;
+} 
+    */
+
+.slideDown {
+    animation: slideDown 0.2s ease-in-out;
+    display: block;
+    background-color: #facc15;
+}
+.slideUp {
+    animation: slideUpReset 0.2s ease-in-out;
+    display: block;
+    background-color: #facc15;
+}
