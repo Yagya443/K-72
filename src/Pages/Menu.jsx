@@ -20,6 +20,7 @@ const Menu = () => {
         if (from && from.closest(".group2")) {
             setFromOutSide(false);
         } else {
+           
             setFromOutSide(true);
         }
 

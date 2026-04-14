@@ -29,37 +29,41 @@ const Projects = () => {
             image2: "https://k72.ca/images/caseStudies/OSM/thumbnailimage_OSM.jpg?w=1280&h=960&s=7a3a71e610146472e6439cc8c765fccd",
         },
         {
-            image1: "https://k72.ca/images/caseStudies/LAMAJEURE_-_Son_sur_mesure/chalaxeur-thumbnail_img.jpg?w=1280&h=960&s=1d30e394b903c242ad9a4f2cb2463cda",
-            image2: "https://k72.ca/images/caseStudies/OSM/thumbnailimage_OSM.jpg?w=1280&h=960&s=7a3a71e610146472e6439cc8c765fccd",
-        },
+            image1: "https://k72.ca/images/caseStudies/LAMAJEURE_-_Son_sur_mesure/chalaxeur-thumbnail_img.jpg?w=1280&h=960&s=1d30e394b903c242ad9a4f2cb2463cda",        },
     ];
+
+    const projectArrLen = projects.length;
+
+    console.log(projectArrLen);
 
     useGSAP(() => {
         gsap.from(".individualBox", {
-            height: '50px',
-            stagger:0.8,
+            height: "50px",
+            stagger: 0.45,
             transformOrigin: "top",
-            ease:'none',
+            ease: "none",
             scrollTrigger: {
-                scrub:true,
+                scrub: 0.1,
                 trigger: ".boxes-wrapper",
-                markers: true,
-                start: "top 75%",
-                end: "top -150%",
+                // markers: true,
+                start: "top 96%",
+                end: `+=${projectArrLen * 525}`,
             },
         });
     }, []);
 
     return (
-        <div className="project-wrapper h-screen w-full pt-1 ">
+        <div className="project-wrapper min-h-screen w-full pt-1 ">
             <h1 className="text-[200px] relative mt-58 ml-4">
                 WORK<sup className="text-5xl absolute top-10">17</sup>
             </h1>
             <div className="boxes-wrapper -mt-16">
-                {projects.map((elem,idx) => (
-                    <div key={idx} className="individualBox w-full h-[550px] flex gap-4  mb-4">
-                        <ProjectsPages 
-                        img1={elem.image1} img2={elem.image2} />
+                {projects.map((elem, idx) => (
+                    <div
+                        key={idx}
+                        className="individualBox w-full h-[525px] flex gap-4  mb-4"
+                    >
+                        <ProjectsPages img1={elem.image1} img2={elem.image2} />
                     </div>
                 ))}
             </div>
