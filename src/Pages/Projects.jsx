@@ -3,6 +3,8 @@ import React from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import ProjectsPages from "../Projects/ProjectsPages";
+import Logo from "../../Logo";
+import { Link } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -29,7 +31,8 @@ const Projects = () => {
             image2: "https://k72.ca/images/caseStudies/OSM/thumbnailimage_OSM.jpg?w=1280&h=960&s=7a3a71e610146472e6439cc8c765fccd",
         },
         {
-            image1: "https://k72.ca/images/caseStudies/LAMAJEURE_-_Son_sur_mesure/chalaxeur-thumbnail_img.jpg?w=1280&h=960&s=1d30e394b903c242ad9a4f2cb2463cda",        },
+            image1: "https://k72.ca/images/caseStudies/LAMAJEURE_-_Son_sur_mesure/chalaxeur-thumbnail_img.jpg?w=1280&h=960&s=1d30e394b903c242ad9a4f2cb2463cda",
+        },
     ];
 
     const projectArrLen = projects.length;
@@ -54,10 +57,13 @@ const Projects = () => {
 
     return (
         <div className="project-wrapper min-h-screen w-full pt-1 ">
-            <h1 className="text-[200px] relative mt-58 ml-4">
+            <Link to="/">
+                <Logo />
+            </Link>
+            <h1 className="project-text text-[200px] relative mt-58 ml-4">
                 WORK<sup className="text-5xl absolute top-10">17</sup>
             </h1>
-            <div className="boxes-wrapper -mt-16">
+            <div className="boxes-wrapper -mt-16 w-full  ">
                 {projects.map((elem, idx) => (
                     <div
                         key={idx}

@@ -3,6 +3,8 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
 import gsap from "gsap";
 import { Timeline } from "gsap/gsap-core.js";
+import Logo from "../../Logo";
+import { Link } from "react-router-dom";
 
 const Agency = () => {
     const imgDiv = useRef(null);
@@ -104,6 +106,8 @@ const Agency = () => {
         },
     ];
 
+    useGSAP(() => {});
+
     useGSAP(() => {
         gsap.to(imgDiv.current, {
             scrollTrigger: {
@@ -124,9 +128,7 @@ const Agency = () => {
                 },
             },
         });
-    });
 
-    useGSAP(() => {
         gsap.to(".card2 ", {
             y: "-97vh",
             scrollTrigger: {
@@ -201,7 +203,7 @@ const Agency = () => {
         });
 
         gsap.to(".firstName-wrapper,.firstName-wrapper2", {
-            x: '-50%',
+            x: "-50%",
             duration: 8,
             ease: "none",
             repeat: -1,
@@ -209,7 +211,7 @@ const Agency = () => {
 
         gsap.fromTo(
             ".lastName-wrapper, .lastName-wrapper2",
-            { x: '-100%' },
+            { x: "-100%" },
             {
                 x: 0,
                 duration: 12,
@@ -275,11 +277,14 @@ const Agency = () => {
 
     return (
         <div
-            className={`agency min-h-screen w-full ${heightBG ? "bg-gray-800" : "bg-amber-50"}`}
+            className={`agency min-h-screen min-w-screen ${heightBG ? "bg-gray-800" : ""}`}
         >
+            <Link to="/">
+                <Logo />
+            </Link>
             <div className="section1 min-h-[200vh] w-full ">
                 <div
-                    className="absolute h-[50vh] top-40 left-130 w-[15vw] overflow-hidden rounded-3xl"
+                    className="agency-image absolute h-[50vh] top-40 left-130 w-[15vw] overflow-hidden rounded-3xl"
                     ref={imgDiv}
                 >
                     <img
@@ -289,15 +294,15 @@ const Agency = () => {
                     />
                 </div>
                 <div>
-                    <div className="relative title top-[60vh] text-[240px] text-center [line-height:200px]">
+                    <div className="agency-title relative title top-[60vh] text-[240px] text-center [line-height:200px]">
                         <h1>
                             SEVEN7Y
                             <br />
                             TWO
                         </h1>
                     </div>
-                    <div className="relative pl-[40%] top-[70vh] ">
-                        <p className="para w-[90%] text-[45px] [line-height:45px] ">
+                    <div className="agency-para relative pl-[40%] top-[70vh] ">
+                        <p className=" w-[90%] text-[45px] [line-height:45px] ">
                             &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; We’re
                             inquisitive and open-minded, and we make sure
                             creativity crowds out ego from every corner. A brand

@@ -28,7 +28,6 @@ const Contact = () => {
                 repeat: -1,
             },
         );
-        console.log(arr);
     });
 
     useEffect(() => {
@@ -52,13 +51,11 @@ const Contact = () => {
 
     useEffect(() => {
         const handleScrollEnd = () => {
-                console.log("heyy")
 
             if (
                 window.innerHeight + window.scrollY >=
-                document.body.scrollHeight-10
+                document.body.scrollHeight - 10
             ) {
-                console.log("hey")
                 window.scrollTo(0, 0);
             }
         };
@@ -76,10 +73,10 @@ const Contact = () => {
         >
             {Array.from({ length: 15 }).map((_, i) => (
                 <div key={i}>
-                    <div className="text-[150px] w-[50%] text-center mt-24 mx-auto [line-height:130px] ">
+                    <div className="contact-wrapper-title text-[150px] w-[50%] text-center mt-24 mx-auto [line-height:130px] ">
                         To Talk About Your Project
                     </div>
-                    <div className="flex justify-between w-[80%] items-center mx-auto hell relative bottom-18">
+                    <div className="contact-wrapper-text flex justify-between w-[80%] items-center mx-auto relative bottom-18">
                         <p className="text-center">
                             Onscreen or in an office.
                             <br /> Here. There. <br />
@@ -97,13 +94,13 @@ const Contact = () => {
                             <p className="text-[150px] ">
                                 YAGNAAKV99@GMAIL.COM
                             </p>
-                            <FaHeart size={120} />
+                            <FaHeart className="contact-manqueepara-heart" size={120} />
                         </div>
                         <div className="contact-manqueepara flex items-center gap-8 ">
                             <p className="text-[150px] ">
                                 YAGNAAKV99@GMAIL.COM
                             </p>
-                            <FaHeart size={120} />
+                            <FaHeart className="contact-manqueepara-heart" size={120} />
                         </div>
                     </div>
                 </div>

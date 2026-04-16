@@ -24,7 +24,7 @@ html {
 .title {
     font-family: var(--primaryfont);
 }
-.para {
+.agency-para {
     font-family: var(--secondaryfont);
 }
 
@@ -36,6 +36,32 @@ html {
 .agency {
     color: #111;
 }
+
+/* .navBaritem {
+    position: relative;
+    overflow: hidden;
+    background: black;
+    color: white;
+    font-family: var(--primaryfont);
+}
+
+.navBaritem::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--bg1);
+    background: black;
+    transform: translateY(-100%);
+    z-index: 0;
+}
+
+.navBaritem:hover::before {
+    animation: slideDown 0.45s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+
+.navBaritem::before {
+    animation: slideUpReset 0.45s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+} */
 
 .navBaritem {
     position: relative;
@@ -51,15 +77,12 @@ html {
     inset: 0;
     background: var(--bg1);
     transform: translateY(-100%);
+    transition: transform 0.45s cubic-bezier(0.77, 0, 0.175, 1);
     z-index: 0;
 }
 
 .navBaritem:hover::before {
-    animation: slideDown 0.45s cubic-bezier(0.77, 0, 0.175, 1) forwards;
-}
-
-.navBaritem::before {
-    animation: slideUpReset 0.45s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+    transform: translateY(0%);
 }
 
 .navBaritem .itemtext {
@@ -205,3 +228,237 @@ html {
     display: block;
     background-color: #facc15;
 }
+
+@media screen and (min-width: 768px) and (max-width: 1080px) {
+    /* Home  */
+
+    .home-wrapper-title {
+        margin-top: 8px;
+        font-size: 110px;
+    }
+    .home-wrapper-textVideo {
+        height: 100px;
+        width: 220px;
+    }
+
+    .home-wrapper-text {
+        width: 30%;
+        line-height: 15px;
+        bottom: 140px;
+        font-size: 12px;
+    }
+
+    /* Agency */
+    .agency-title {
+        top: 50vh;
+        font-size: 150px;
+        line-height: 150px;
+    }
+    .agency-image {
+        left: 250px;
+        height: 50vh;
+        width: 30vh;
+    }
+
+    .agency-para {
+        top: 60vh;
+    }
+
+    .agency-para p {
+        font-size: 25px;
+        line-height: 35px;
+    }
+    .agency .card1,
+    .agency .card2 {
+        width: 400px;
+    }
+
+    .agency .firstName-wrapper > * {
+        font-size: 120px;
+    }
+    .agency .lastName-wrapper > * {
+        font-size: 120px;
+    }
+
+    /* project */
+
+    .project-text {
+        font-size: 160px;
+    }
+
+    .project-wrapper .boxes-wrapper {
+        margin-top: -40px;
+    }
+
+    /* contact */
+
+    .contact-wrapper-title {
+        font-size: 100px;
+        line-height: 80px;
+    }
+    .contact-wrapper-text > * {
+        font-size: 10px;
+    }
+
+    .contact-manqueepara > * {
+        font-size: 100px;
+    }
+
+    /* navbar */
+    .navBaritem {
+        padding-right: 100px;
+        padding-left: 10px;
+    }
+    .projectItem {
+        padding-top: 10px;
+    }
+    .agencyItem {
+        padding-top: 55px;
+    }
+
+    .menuItem {
+        padding-top: 100px;
+    }
+
+    /* menu */
+    .menu-footer-link{
+        bottom: 35px;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+    /* Projects */
+
+    .project-wrapper {
+        overflow-x: hidden;
+    }
+
+    .project-text {
+        font-size: 120px;
+    }
+    .boxes-wrapper {
+        width: 100%;
+    }
+
+    /* navbar */
+
+    .navBar {
+        /* display: none; */
+        font-size: 20px;
+    }
+    .navBaritem {
+        padding-right: 80px;
+        padding-left: 10px;
+    }
+    .navBaritem {
+        padding-right: 100px;
+        padding-left: 10px;
+    }
+    .projectItem {
+        padding-top: 10px;
+    }
+    .agencyItem {
+        padding-top: 50px;
+    }
+    .menuItem {
+        padding-top: 90px;
+    }
+
+    .project-text {
+        margin-top: 350px;
+    }
+
+
+    /* menu */
+
+    .group2 span{
+        font-size: 100px;
+    }
+    .marquee-track{
+        font-size: 100px;
+
+    }
+    .marquee-track img {
+        height: 80px;
+    }
+    /* .cross-logo-wrapper{
+        justify-content: end;
+    } */
+
+    .cross-logo{
+        height: 140px;
+        width: 140px;
+        right: 0;
+    }
+    .menu-footer p{
+        font-size: 10px;
+    }
+    .menu-footer-link{
+        bottom: 25px;
+        gap: 4px;
+    }
+    .menu-footer-link a{
+        font-size: 15px;
+        border-radius: 10px;
+    }
+
+    /* agence*/
+     .agency {
+        /* overflow-x: hidden; */
+    }
+    .agency-title {
+        top: 45vh;
+        font-size: 120px;
+        line-height: 120px;
+    }
+    .agency-image {
+        left: 200px;
+        height: 50vh;
+        width: 30vh;
+    }
+
+    .agency-para {
+        top: 60vh;
+    }
+
+    .agency-para p {
+        font-size: 20px;
+        line-height: 25px;
+    }
+    /* .agency .card1,
+    .agency .card2 {
+        width: 400px;
+    } */
+
+    /* .agency .firstName-wrapper > * {
+        font-size: 120px;
+    } */
+    /* .agency .lastName-wrapper > * {
+        font-size: 120px;
+    } */
+
+    .contact-wrapper-title {
+        font-size: 80px;
+        line-height: 70px;
+    }
+.contact-wrapper-text{
+    width: 90%;
+}
+
+    .contact-wrapper-text > * {
+        font-size: 10px;
+    }
+
+    .contact-manqueepara > * {
+        font-size: 75px;
+    }
+    .contact-manqueepara-heart{
+        height: 75px;
+        width: 75px;
+    }
+
+
+
+}
+
+

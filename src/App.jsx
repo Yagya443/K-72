@@ -15,7 +15,7 @@ function App() {
     
 
     return (
-        <div>
+        <div >
             {(currentPath !== "/" && currentPath !== "/menu") && <Navbar />}
 
             <Routes>

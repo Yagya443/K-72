@@ -20,7 +20,7 @@ const Navbar = () => {
                 ease: "power3.out",
             });
             gsap.to(".icon-wrapper", {
-                y: 95,
+                y: 80,
                 ease: "power3.out",
             });
             setShowMenu(false);
@@ -51,7 +51,7 @@ const Navbar = () => {
     }, []);
 
     return (
-        <div className="navBar fixed right-0 top-0 z-[100] flex text-2xl text-white items-start">
+        <div className="navBar fixed right-0 top-0 z-[100] flex text-2xl text-white  items-start">
             <Link
                 to="/projects"
                 className="navBaritem projectItem bg-black pr-48 pl-4 pt-6 pb-2"
@@ -80,12 +80,12 @@ const Navbar = () => {
 
             <Link
                 to="/menu"
-                className="navBaritem relative menuItem bg-black pr-48 pl-4 pb-2 "
+                className="navBaritem relative menuItem bg-black pr-48 pl-4 pb-2 pt-30 "
             >
                 <div
                     className={`${
                         showMenu ? "opacity-100 " : "opacity-0"
-                    } pt-30 itemtext`}
+                    }  itemtext`}
                 >
                     Menu
                 </div>
