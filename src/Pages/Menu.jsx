@@ -89,13 +89,13 @@ const Menu = () => {
                     <div className="hoverText w-screen overflow-hidden hidden ">
                         <div className="marquee-track flex w-[max-content] items-center gap-[3rem] text-9xl">
                             <div className="text-nowrap">KNOW US MORE</div>
-                            <FaHeart size={110} />
+                            <FaHeart className="heart" size={110} />
                             <div className="text-nowrap">KNOW US MORE</div>
-                            <FaHeart size={110} />
+                            <FaHeart  className="heart" size={110} />
                             <div className="text-nowrap">KNOW US MORE</div>
-                            <FaHeart size={110} />
+                            <FaHeart className="heart"  size={110} />
                             <div className="text-nowrap">KNOW US MORE</div>
-                            <FaHeart size={110} />
+                            <FaHeart className="heart"  size={110} />
                         </div>
                     </div>
                 </Link>

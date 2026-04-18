@@ -401,8 +401,8 @@ const Agency = () => {
                             onMouseEnter={() => setImgDisplay(idx)}
                             onMouseLeave={() => setImgDisplay(-1)}
                         >
-                            <h3 className="text-xl">{team.position}</h3>
-                            <h1 className="text-5xl">
+                            <h3 className="teamInfo-position text-xl">{team.position}</h3>
+                            <h1 className="teamInfo-name text-5xl">
                                 {team.firstName} {team.lastName}
                             </h1>
                         </div>
@@ -423,7 +423,7 @@ const Agency = () => {
             </div>
 
             <div className="min-h-[100vh] w-full relative mt-72">
-                <p className="w-full flex justify-center sticky top-8  text-5xl text-amber-50 z-10">
+                <p className="viewAllProjects w-full flex justify-center sticky top-8  text-5xl text-amber-50 z-10">
                     View All Projects
                 </p>
 
@@ -441,11 +441,11 @@ const Agency = () => {
                                 src={img.image}
                                 className={`w-full h-full rounded-4xl object-cover absolute`}
                             />
-                            <div className="absolute left-1/2 top-1/2 -translate-1/2 text-center text-amber-50 text-nowrap ">
-                                <div className="text-4xl font-semibold">
+                            <div className=" absolute left-1/2 top-1/2 -translate-1/2 text-center text-amber-50 text-nowrap ">
+                                <div className="projectImg-para text-4xl font-semibold">
                                     {img.para}
                                 </div>
-                                <div className="text-8xl font-bold">
+                                <div className="projectImg-title text-8xl font-bold">
                                     {img.title}
                                 </div>
                             </div>

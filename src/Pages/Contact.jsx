@@ -76,7 +76,7 @@ const Contact = () => {
                     <div className="contact-wrapper-title text-[150px] w-[50%] text-center mt-24 mx-auto [line-height:130px] ">
                         To Talk About Your Project
                     </div>
-                    <div className="contact-wrapper-text flex justify-between w-[80%] items-center mx-auto relative bottom-18">
+                    <div className="contact-wrapper-text flex justify-between w-[80%] items-center relative bottom-18">
                         <p className="text-center">
                             Onscreen or in an office.
                             <br /> Here. There. <br />

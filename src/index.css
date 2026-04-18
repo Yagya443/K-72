@@ -37,32 +37,6 @@ html {
     color: #111;
 }
 
-/* .navBaritem {
-    position: relative;
-    overflow: hidden;
-    background: black;
-    color: white;
-    font-family: var(--primaryfont);
-}
-
-.navBaritem::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: var(--bg1);
-    background: black;
-    transform: translateY(-100%);
-    z-index: 0;
-}
-
-.navBaritem:hover::before {
-    animation: slideDown 0.45s cubic-bezier(0.77, 0, 0.175, 1) forwards;
-}
-
-.navBaritem::before {
-    animation: slideUpReset 0.45s cubic-bezier(0.77, 0, 0.175, 1) forwards;
-} */
-
 .navBaritem {
     position: relative;
     overflow: hidden;
@@ -116,6 +90,7 @@ html {
     display: flex;
     align-items: center;
     background: #facc15;
+
     z-index: 2;
 }
 
@@ -199,6 +174,7 @@ html {
 .group2:hover .hoverText {
     display: block;
     background-color: #facc15;
+    height: 100%;
 }
 
 .group2:hover span {
@@ -321,7 +297,7 @@ html {
     }
 
     /* menu */
-    .menu-footer-link{
+    .menu-footer-link {
         bottom: 35px;
     }
 }
@@ -338,6 +314,7 @@ html {
     }
     .boxes-wrapper {
         width: 100%;
+        margin-top: -25px;
     }
 
     /* navbar */
@@ -368,15 +345,13 @@ html {
         margin-top: 350px;
     }
 
-
     /* menu */
 
-    .group2 span{
+    .group2 span {
         font-size: 100px;
     }
-    .marquee-track{
+    .marquee-track {
         font-size: 100px;
-
     }
     .marquee-track img {
         height: 80px;
@@ -385,34 +360,36 @@ html {
         justify-content: end;
     } */
 
-    .cross-logo{
+    .cross-logo {
         height: 140px;
         width: 140px;
         right: 0;
     }
-    .menu-footer p{
+    .menu-footer p {
         font-size: 10px;
     }
-    .menu-footer-link{
+    .menu-footer-link {
         bottom: 25px;
         gap: 4px;
     }
-    .menu-footer-link a{
+    .menu-footer-link a {
         font-size: 15px;
         border-radius: 10px;
     }
+    .heart {
+        height: 100px;
+        width: 100px;
+    }
 
     /* agence*/
-     .agency {
-        /* overflow-x: hidden; */
-    }
+
     .agency-title {
         top: 45vh;
         font-size: 120px;
-        line-height: 120px;
+        line-height: 150px;
     }
     .agency-image {
-        left: 200px;
+        left: 150px;
         height: 50vh;
         width: 30vh;
     }
@@ -422,28 +399,43 @@ html {
     }
 
     .agency-para p {
-        font-size: 20px;
-        line-height: 25px;
+        font-size: 25px;
+        line-height: 35px;
     }
-    /* .agency .card1,
+    .agency .card1,
     .agency .card2 {
         width: 400px;
-    } */
+    }
 
-    /* .agency .firstName-wrapper > * {
+    .agency .firstName-wrapper > *,
+    .agency .firstName-wrapper2 > * {
         font-size: 120px;
-    } */
-    /* .agency .lastName-wrapper > * {
+    }
+    .agency .lastName-wrapper > *,
+    .agency .lastName-wrapper2 > * {
         font-size: 120px;
-    } */
+    }
+    .teamInfo-name {
+        font-size: 30px;
+    }
+    .teamInfo-position {
+        font-size: 15px;
+    }
+    .hoverImg {
+        height: 250px;
+        width: 150px;
+        left: 200px;
+    }
+
+    /* contact */
 
     .contact-wrapper-title {
         font-size: 80px;
         line-height: 70px;
     }
-.contact-wrapper-text{
-    width: 90%;
-}
+    .contact-wrapper-text {
+        width: 90%;
+    }
 
     .contact-wrapper-text > * {
         font-size: 10px;
@@ -452,13 +444,187 @@ html {
     .contact-manqueepara > * {
         font-size: 75px;
     }
-    .contact-manqueepara-heart{
+    .contact-manqueepara-heart {
         height: 75px;
         width: 75px;
     }
-
-
-
 }
 
+@media screen and (max-width: 480px) {
+    .logo-text {
+        font-size: 40px;
+    }
 
+    /* menu */
+    .group2:hover .hoverText {
+        padding-top: 20px;
+    }
+
+    .group2 span {
+        font-size: 60px;
+    }
+    .marquee-track {
+        font-size: 60px;
+    }
+    .marquee-track img {
+        height: 60px;
+        width: 120px;
+    }
+    /* .cross-logo-wrapper{
+        justify-content: end;
+    } */
+
+    .cross-logo {
+        height: 100px;
+        width: 100px;
+        right: 0;
+    }
+    .menu-footer p {
+        font-size: 8px;
+    }
+    .menu-footer-link {
+        bottom: 25px;
+        gap: 4px;
+    }
+    .menu-footer-link a {
+        font-size: 15px;
+        border-radius: 10px;
+    }
+    .heart {
+        height: 50px;
+        width: 50px;
+    }
+
+    /* navbar */
+    .navBar {
+        /* display: none; */
+        font-size: 10px;
+    }
+    .navBaritem {
+        padding-right: 80px;
+        padding-left: 10px;
+    }
+    .navBaritem {
+        padding-right: 50px;
+        padding-left: 7px;
+    }
+    .projectItem {
+        padding-top: 10px;
+        padding-bottom: 5px;
+    }
+    .agencyItem {
+        padding-top: 35px;
+    }
+    .menuItem {
+        padding-top: 60px;
+        padding-bottom: 5px;
+    }
+    .project-text {
+        margin-top: 350px;
+    }
+
+    /* projects */
+
+    .project-wrapper {
+        overflow-x: hidden;
+    }
+
+    .project-text {
+        font-size: 120px;
+    }
+    .boxes-wrapper {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .project-text {
+        font-size: 75px;
+        margin-top: 320px;
+    }
+    .project-text sup {
+        font-size: 30px;
+        top: 15px;
+    }
+
+    /* Contact */
+    .contact-wrapper-title {
+        font-size: 60px;
+        line-height: 50px;
+        margin-top: 100px;
+    }
+    .contact-wrapper-text {
+        width: 95%;
+    }
+
+    .contact-wrapper-text > * {
+        font-size: 7px;
+    }
+
+    .contact-manqueepara > * {
+        font-size: 50px;
+    }
+    .contact-manqueepara-heart {
+        height: 60px;
+        width: 60px;
+    }
+
+
+    /* agency */
+    .agency-title {
+        top: 45vh;
+        font-size: 75px;
+        line-height: 80px;
+    }
+    .agency-image {
+        left: 50px;
+        height: 50vh;
+        width: 30vh;
+    }
+
+    .agency-para {
+        top: 60vh;
+    }
+
+    .agency-para p {
+        font-size: 15px;
+        line-height: 25px;
+    }
+    .agency .card1,
+    .agency .card2 {
+        width: 300px;
+    }
+
+    .agency .firstName-wrapper > *,
+    .agency .firstName-wrapper2 > * {
+        font-size: 70px;
+    }
+    .agency .lastName-wrapper > *,
+    .agency .lastName-wrapper2 > * {
+        font-size: 70px;
+    }
+    .teamInfo-name {
+        font-size: 20px;
+    }
+    .teamInfo-position {
+        font-size: 10px;
+
+    }
+    .teamInfo{
+        padding-left: 4px;
+    }
+    .hoverImg {
+        height: 250px;
+        width: 150px;
+        left: 120px;
+    }
+    .viewAllProjects{
+        font-size: 30px;
+    }
+    .projectImg-para{
+        font-size: 30px;
+    }
+    .projectImg-title{
+        font-size: 20px;
+        margin-top: 10px;
+    }
+}
