@@ -448,12 +448,74 @@ html {
         height: 75px;
         width: 75px;
     }
+
+    /* home */
+
+    .home-wrapper-title {
+        margin-top: 8px;
+        font-size: 90px;
+    }
+    .video-class{
+        /* width: 100px; */
+    }
+    .home-wrapper-textVideo {
+        height: 70px;
+        width: 140px;
+    }
+
+    .home-wrapper-text {
+        width: 40%;
+        right: 40px;
+        line-height: 15px;
+        bottom: 140px;
+        font-size: 14px;
+    }
+
+    .home-wrapper-project,
+    .home-wrapper-agency{
+        width: 250px;
+        font-size: 30px;
+        padding: 20px 5px;
+        text-align: center;
+    }
+
 }
 
 @media screen and (max-width: 480px) {
     .logo-text {
         font-size: 40px;
     }
+
+    /* home */
+
+    .home-wrapper-title {
+        margin-top: 8px;
+        font-size: 50px;
+    }
+    .video-class{
+        /* width: 100px; */
+    }
+    .home-wrapper-textVideo {
+        height: 40px;
+        width: 80px;
+    }
+
+    .home-wrapper-text {
+        width: 40%;
+        right: 40px;
+        line-height: 15px;
+        bottom: 140px;
+        font-size: 7px;
+    }
+
+    .home-wrapper-project,
+    .home-wrapper-agency{
+        width: 150px;
+        font-size: 20px;
+        padding: 10px 5px;
+        text-align: center;
+    }
+
 
     /* menu */
     .group2:hover .hoverText {
@@ -496,6 +558,7 @@ html {
     }
 
     /* navbar */
+
     .navBar {
         /* display: none; */
         font-size: 10px;
@@ -548,7 +611,7 @@ html {
 
     /* Contact */
     .contact-wrapper-title {
-        font-size: 60px;
+        font-size: 50px;
         line-height: 50px;
         margin-top: 100px;
     }
@@ -567,7 +630,6 @@ html {
         height: 60px;
         width: 60px;
     }
-
 
     /* agency */
     .agency-title {
@@ -607,9 +669,8 @@ html {
     }
     .teamInfo-position {
         font-size: 10px;
-
     }
-    .teamInfo{
+    .teamInfo {
         padding-left: 4px;
     }
     .hoverImg {
@@ -617,13 +678,13 @@ html {
         width: 150px;
         left: 120px;
     }
-    .viewAllProjects{
+    .viewAllProjects {
         font-size: 30px;
     }
-    .projectImg-para{
+    .projectImg-para {
         font-size: 30px;
     }
-    .projectImg-title{
+    .projectImg-title {
         font-size: 20px;
         margin-top: 10px;
     }

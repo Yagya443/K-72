@@ -8,6 +8,8 @@ import { Link } from "react-router-dom";
 
 const Agency = () => {
     const imgDiv = useRef(null);
+    const cardRef = useRef(null);
+
     const [index, setIndex] = useState(0);
     const [screenHeight, setScreenHeight] = useState(window.innerHeight);
     const [heightBG, setheightBG] = useState(false);
@@ -106,7 +108,23 @@ const Agency = () => {
         },
     ];
 
-    useGSAP(() => {});
+    
+    
+    useGSAP(() => {
+        if (!cardRef.current) return; // ✅ important
+
+        gsap.to(cardRef.current, {
+            y: () => -cardRef.current.offsetHeight,
+            scrollTrigger: {
+                trigger: ".box-wrapper",
+                pin: true,
+                pinSpacing: false,
+                scrub: 1,
+                start: "center-=375 center",
+                end: "center+=200 center",
+            },
+        });
+    });
 
     useGSAP(() => {
         gsap.to(imgDiv.current, {
@@ -129,18 +147,6 @@ const Agency = () => {
             },
         });
 
-        gsap.to(".card2 ", {
-            y: "-97vh",
-            scrollTrigger: {
-                // markers: true,
-                pin: true,
-                pinSpacing: false,
-                scrub: 1,
-                trigger: ".box-wrapper",
-                start: "center-=375 center",
-                end: "center+=200 center",
-            },
-        });
         gsap.to(".hoverImg", {
             scrollTrigger: {
                 // markers: true,
@@ -357,7 +363,10 @@ const Agency = () => {
                     </div>
 
                     {/* Second Images */}
-                    <div className="card2 relative z-20 w-125 rounded-2xl">
+                    <div
+                        className="card2  relative z-20 w-125 rounded-2xl"
+                        ref={cardRef}
+                    >
                         <div className="absolute left-0 top-[20vh] w-full ">
                             <div className="firstName-wrapper2 flex w-[200vw] z-30">
                                 <h1 className="text-[12rem] text-[#ffcc00] w-[100vw]">
@@ -393,7 +402,7 @@ const Agency = () => {
                     </div>
                 </div>
 
-                <div className="w-full border-amber-50 border-t-2 relative">
+                <div className= "mt-50 w-full border-amber-50 border-t-2 relative">
                     {teamData.map((team, idx) => (
                         <div
                             className={`teamInfo w-full flex justify-between py-2 px-4 border-b-2 text-amber-50 relative cursor-pointer ${imgDisplay === idx && "bg-[#facc15] "}`}
@@ -401,7 +410,9 @@ const Agency = () => {
                             onMouseEnter={() => setImgDisplay(idx)}
                             onMouseLeave={() => setImgDisplay(-1)}
                         >
-                            <h3 className="teamInfo-position text-xl">{team.position}</h3>
+                            <h3 className="teamInfo-position text-xl">
+                                {team.position}
+                            </h3>
                             <h1 className="teamInfo-name text-5xl">
                                 {team.firstName} {team.lastName}
                             </h1>

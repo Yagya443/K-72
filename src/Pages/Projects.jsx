@@ -37,8 +37,6 @@ const Projects = () => {
 
     const projectArrLen = projects.length;
 
-    console.log(projectArrLen);
-
     useGSAP(() => {
         gsap.from(".individualBox", {
             height: "50px",

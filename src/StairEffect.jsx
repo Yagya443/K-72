@@ -47,7 +47,7 @@ const StairEffect = (props) => {
     }, [currentPath]);
 
     return (
-        <div >
+        < >
             <div
                 ref={stairParent}
                 className="fixed top-0 left-0 h-screen w-full z-50"
@@ -61,7 +61,7 @@ const StairEffect = (props) => {
                 </div>
             </div>
             <div ref={pageRef}>{props.children}</div>
-        </div>
+        </>
     );
 };
 

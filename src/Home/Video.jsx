@@ -4,7 +4,7 @@ const Video = ({ className = "" }) => {
     return (
         <>
             <video
-                className={`${className} h-full w-full object-cover pointer-events-none `}
+                className={`${className} h-full w-full object-cover pointer-events-none video-class`}
                 loop
                 autoPlay
                 muted

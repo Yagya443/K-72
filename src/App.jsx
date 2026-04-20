@@ -10,8 +10,6 @@ import Blog from "./Pages/Blog";
 
 function App() {
     const currentPath = useLocation().pathname;
-
-    console.log(currentPath);
     
 
     return (

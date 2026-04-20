@@ -8,9 +8,9 @@ import StairEffect from "./StairEffect.jsx";
 createRoot(document.getElementById("root")).render(
     <StrictMode>
         <BrowserRouter>
-            {/* <StairEffect> */}
+            <StairEffect>
                 <App />
-            {/* </StairEffect> */}
+            </StairEffect>
         </BrowserRouter>
     </StrictMode>,
 );
